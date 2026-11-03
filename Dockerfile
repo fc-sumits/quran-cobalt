@@ -1,5 +1,8 @@
 FROM ghcr.io/imputnet/cobalt:latest
 
+COPY cookies.txt /cookies.txt
+ENV COOKIE_PATH=/cookies.txt
+
 ENV PROCESSING_MAX_THREADS=1
 ENV MAX_CONCURRENT_REQUESTS=1
 
